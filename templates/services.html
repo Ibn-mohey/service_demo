@@ -1,16 +1,5 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: https://1.envato.market/EA4JP
-Renew Support: https://1.envato.market/EA4JP
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
+
 <html lang="en" dir="rtl">
 <!--begin::Head-->
 
@@ -25,15 +14,15 @@ License: You must have a valid license purchased only from themeforest(the above
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 	<!--end::Fonts-->
 	<!--begin::Global Theme Styles(used by all pages)-->
-	<link href="task/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
-	<link href="task/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
-	<link href="task/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Theme Styles-->
 	<!--begin::Layout Themes(used by all pages)-->
-	<link href="task/assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
-	<link href="task/assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
-	<link href="task/assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
-	<link href="task/assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Themes-->
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 	<style>
@@ -47,12 +36,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <body id="kt_body"
 	class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+	
 	<!--begin::Main-->
 	<!--begin::Header Mobile-->
 	<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 		<!--begin::Logo-->
 		<a href="index.html">
-			<img alt="Logo" src="task/assets/media/logo.png"  width="160px" />
+			<img src="/static/assets/media/logo.png" alt="Cat image" width="20%" height="auto" /> 
+			<img src="/static/assets/media/logo.png" alt="Logo"  width="160px" />
 		</a>
 		<!--end::Logo-->
 		<!--begin::Toolbar-->
@@ -189,9 +180,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 	
 							<div class="col-12 d-flex" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
-								<div class="col-4 font-weight-bolder"> <img src="task/assets/media/new/image1.png" /></div>
-								<div class="col-4 font-weight-bolder"> <img src="task/assets/media/new/image2.png" /></div>
-								<div class="col-4 font-weight-bolder"> <img src="task/assets/media/new/image3.png" /></div>
+								<div class="col-4 font-weight-bolder"> <img src="/static/assets/media/new/image1.png" /></div>
+								<div class="col-4 font-weight-bolder"> <img src="/static/assets/media/new/image2.png" /></div>
+								<div class="col-4 font-weight-bolder"> <img src="/static/assets/media/new/image3.png" /></div>
 							</div>
 							<div class="col-12 d-flex">
 							<div class="col-4">
@@ -310,7 +301,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="brand flex-column-auto" id="kt_brand">
 					<!--begin::Logo-->
 					<a href="index.html" class="brand-logo">
-						<img alt="Logo" src="task/assets/media/logo.png" width="160px" />
+						<img alt="Logo" src="/static/assets/media/logo.png" width="160px" />
 					</a>
 					<!--end::Logo-->
 					<!--begin::Toggle-->
@@ -382,7 +373,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									style="display: none; overflow: hidden;"><i class="menu-arrow"></i>
 									<ul class="menu-subnav">
 
-										<li class="menu-item " aria-haspopup="true"> <a href="task/services.html"
+										<li class="menu-item " aria-haspopup="true"> <a href="/static/services.html"
 												class="menu-link">
 												<span class="svg-icon menu-icon">
 													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
@@ -408,7 +399,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 										<li class="menu-item " aria-haspopup="true">
 
-											<a href="task/info.html" class="menu-link">
+											<a href="/static/info.html" class="menu-link">
 												<span class="svg-icon menu-icon">
 													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 													<svg xmlns="http://www.w3.org/2000/svg"
@@ -433,7 +424,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 										<li class="menu-item " aria-haspopup="true">
 
-											<a href="task/login.html" class="menu-link">
+											<a href="/static/login.html" class="menu-link">
 												<span class="svg-icon menu-icon">
 													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 													<svg xmlns="http://www.w3.org/2000/svg"
@@ -633,7 +624,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="">
-																						<img src="task/assets/media/new/H.png" width="200px"
+																						<img src="/static/assets/media/new/H.png" width="200px"
 																							alt="image">
 																					</div>
 																					<div
@@ -688,7 +679,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="">
-																						<img src="task/assets/media/new/H.png" width="200px"
+																						<img src="/static/assets/media/new/H.png" width="200px"
 																							alt="image">
 																					</div>
 																					<div
@@ -743,7 +734,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="">
-																						<img src="task/assets/media/new/H.png" width="200px"
+																						<img src="/static/assets/media/new/H.png" width="200px"
 																							alt="image">
 																					</div>
 																					<div
@@ -803,7 +794,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="symbol symbol-circle symbol-lg-75">
-																						<img src="task/assets/media/users/300_1.jpg"
+																						<img src="/static/assets/media/users/300_1.jpg"
 																							alt="image">
 																					</div>
 																					<div
@@ -851,7 +842,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="symbol symbol-circle symbol-lg-75">
-																						<img src="task/assets/media/users/300_1.jpg"
+																						<img src="/static/assets/media/users/300_1.jpg"
 																							alt="image">
 																					</div>
 																					<div
@@ -900,7 +891,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																					class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
 																					<div
 																						class="symbol symbol-circle symbol-lg-75">
-																						<img src="task/assets/media/users/300_1.jpg"
+																						<img src="/static/assets/media/users/300_1.jpg"
 																							alt="image">
 																					</div>
 																					<div
@@ -1411,9 +1402,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
 	<!--end::Global Config-->
 	<!--begin::Global Theme Bundle(used by all pages)-->
-	<script src="task/assets/plugins/global/plugins.bundle.js"></script>
-	<script src="task/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-	<script src="task/assets/js/scripts.bundle.js"></script>
+	<script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+	<script src="/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+	<script src="/static/assets/js/scripts.bundle.js"></script>
 	<script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
 	<!--end::Global Theme Bundle-->
 

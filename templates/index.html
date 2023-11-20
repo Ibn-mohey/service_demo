@@ -25,15 +25,15 @@ License: You must have a valid license purchased only from themeforest(the above
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 	<!--end::Fonts-->
 	<!--begin::Global Theme Styles(used by all pages)-->
-	<link href="{{ url_for('static', filename='assets/plugins/global/plugins.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ url_for('static', filename='assets/plugins/custom/prismjs/prismjs.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ url_for('static', filename='assets/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Theme Styles-->
 	<!--begin::Layout Themes(used by all pages)-->
-	<link href="{{ url_for('static', filename='assets/css/themes/layout/header/base/light.rtl.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ url_for('static', filename='assets/css/themes/layout/header/menu/light.rtl.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ url_for('static', filename='assets/css/themes/layout/brand/dark.rtl.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ url_for('static', filename='assets/css/themes/layout/aside/dark.rtl.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Themes-->
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 </head>
@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 		<!--begin::Logo-->
 		<a href="index.html">
-			<img alt="Logo" src="{{ url_for('static', filename='assets/media/logo.png') }}" />
+			<img src="/static/assets/media/logo.png" alt="Logo"  width="160px" />
 		</a>
 		<!--end::Logo-->
 		<!--begin::Toolbar-->
@@ -95,7 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="brand flex-column-auto" id="kt_brand">
 					<!--begin::Logo-->
 					<a href="index.html" class="brand-logo">
-						<img alt="Logo" src="{{ url_for('static', filename='assets/media/logo.png') }}" />
+						<img alt="Logo" src="/static/assets/media/logo.png" />
 					</a>
 					<!--end::Logo-->
 					<!--begin::Toggle-->
@@ -167,7 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									style="display: none; overflow: hidden;"><i class="menu-arrow"></i>
 									<ul class="menu-subnav">
 								
-										<li class="menu-item " aria-haspopup="true">	<a href="task/services.html" class="menu-link">
+										<li class="menu-item " aria-haspopup="true">	<a href="/static/services.html" class="menu-link">
 											<span class="svg-icon menu-icon">
 												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 												<svg xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 										<li class="menu-item " aria-haspopup="true">	
 											
-											<a href="task/info.html" class="menu-link">
+											<a href="/static/info.html" class="menu-link">
 												<span class="svg-icon menu-icon">
 													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 													<svg xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 										<li class="menu-item " aria-haspopup="true">	
 											
-											<a href="task/login.html" class="menu-link">
+											<a href="/static/login.html" class="menu-link">
 												<span class="svg-icon menu-icon">
 													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 													<svg xmlns="http://www.w3.org/2000/svg"
@@ -296,7 +296,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--begin::Pic-->
 										<div class="flex-shrink-0 mr-7" style="padding-right: 42%;">
 											<div class="symbol symbol-50 symbol-lg-120">
-												<img alt="Logo" src="{{ url_for('static', filename='assets/media/users/300_1.jpg') }}" /> 
+												<img alt="Pic" src="/static/assets/media/users/300_1.jpg"
 													style="border-radius :57%" />
 											</div>
 										</div>
@@ -398,7 +398,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--begin::Header-->
 			<div class="d-flex align-items-center mt-5">
 				<div class="symbol symbol-100 mr-5">
-					<div class="symbol-label" style="background-image:url('{{ url_for('static', filename='assets/media/users/300_21.jpg') }} ')"></div>
+					<div class="symbol-label" style="background-image:url('assets/media/users/300_21.jpg')"></div>
 					<i class="symbol-badge bg-success"></i>
 				</div>
 				<div class="d-flex flex-column">
@@ -495,7 +495,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="navi-text">
 							<div class="font-weight-bold">My Messages</div>
-							<div class="text-muted">Inbox and tasks</div>
+							<div class="text-muted">Inbox and /statics</div>
 						</div>
 					</div>
 				</a>
@@ -554,8 +554,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="navi-text">
-							<div class="font-weight-bold">My Tasks</div>
-							<div class="text-muted">latest tasks and projects</div>
+							<div class="font-weight-bold">My /statics</div>
+							<div class="text-muted">latest /statics and projects</div>
 						</div>
 					</div>
 				</a>
@@ -1574,7 +1574,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="d-flex flex-column mb-5 align-items-start">
 									<div class="d-flex align-items-center">
 										<div class="symbol symbol-circle symbol-40 mr-3">
-											<img alt="Pic" src="task/assets/media/users/300_12.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_12.jpg" />
 										</div>
 										<div>
 											<a href="#"
@@ -1597,7 +1597,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
 										</div>
 										<div class="symbol symbol-circle symbol-40 ml-3">
-											<img alt="Pic" src="task/assets/media/users/300_21.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_21.jpg" />
 										</div>
 									</div>
 									<div
@@ -1610,7 +1610,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="d-flex flex-column mb-5 align-items-start">
 									<div class="d-flex align-items-center">
 										<div class="symbol symbol-circle symbol-40 mr-3">
-											<img alt="Pic" src="task/assets/media/users/300_21.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_21.jpg" />
 										</div>
 										<div>
 											<a href="#"
@@ -1633,7 +1633,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
 										</div>
 										<div class="symbol symbol-circle symbol-40 ml-3">
-											<img alt="Pic" src="task/assets/media/users/300_21.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_21.jpg" />
 										</div>
 									</div>
 									<div
@@ -1645,7 +1645,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="d-flex flex-column mb-5 align-items-start">
 									<div class="d-flex align-items-center">
 										<div class="symbol symbol-circle symbol-40 mr-3">
-											<img alt="Pic" src="task/assets/media/users/300_12.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_12.jpg" />
 										</div>
 										<div>
 											<a href="#"
@@ -1670,7 +1670,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
 										</div>
 										<div class="symbol symbol-circle symbol-40 ml-3">
-											<img alt="Pic" src="task/assets/media/users/300_21.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_21.jpg" />
 										</div>
 									</div>
 									<div
@@ -1683,7 +1683,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="d-flex flex-column mb-5 align-items-start">
 									<div class="d-flex align-items-center">
 										<div class="symbol symbol-circle symbol-40 mr-3">
-											<img alt="Pic" src="task/assets/media/users/300_12.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_12.jpg" />
 										</div>
 										<div>
 											<a href="#"
@@ -1706,7 +1706,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
 										</div>
 										<div class="symbol symbol-circle symbol-40 ml-3">
-											<img alt="Pic" src="task/assets/media/users/300_21.jpg" />
+											<img alt="Pic" src="/static/assets/media/users/300_21.jpg" />
 										</div>
 									</div>
 									<div
@@ -2166,9 +2166,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
 	<!--end::Global Config-->
 	<!--begin::Global Theme Bundle(used by all pages)-->
-	<script src="{{ url_for('static', filename='assets/plugins/global/plugins.bundle.js') }}" ></script>
-	<script src="{{ url_for('static', filename='assets/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
-	<script src="{{ url_for('static', filename='assets/js/scripts.bundle.js') }}"></script>
+	<script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+	<script src="/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+	<script src="/static/assets/js/scripts.bundle.js"></script>
 	<script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
 	<!--end::Global Theme Bundle-->
 </body>

@@ -30,6 +30,8 @@ from flask_login import (
     login_required,
 )
 
+
+
 from app import create_app,db,login_manager,bcrypt
 from models import User
 from forms import login_form,register_form
@@ -44,6 +46,14 @@ app = create_app()
 # url_for('static', filename='path/to/file')
 
 
+#
+# 
+
+@app.route("/image") 
+def serve_image(): 
+    message = "Image Route"
+    return render_template('image.html', message=message)
+
 
 @app.before_request
 def session_handler():
@@ -52,9 +62,12 @@ def session_handler():
 
 @app.route("/", methods=("GET", "POST"), strict_slashes=False)
 def index():
-    print(request.form)
-    return render_template("index.html",title="Home")
+    return render_template('services.html')
 
+
+@app.route("/test/", methods=("GET", "POST"), strict_slashes=False)
+def test():
+    return render_template('base.html')
 
 @app.route("/login/", methods=("GET", "POST"), strict_slashes=False)
 def login():
@@ -67,11 +80,11 @@ def login():
                 login_user(user)
                 return redirect(url_for('index'))
             else:
-                flash("Invalid Username or password!", "danger")
+                flash("اسم المستخدم او كلمة السر غير صحيحة!", "danger")
         except Exception as e:
-            flash(e, "danger")
+            flash(f'{e} خطا غير مفهوم حاول مجددا', "danger")
 
-    return render_template("auth.html",
+    return render_template("login.html",
         form=form,
         text="Login",
         title="Login",
@@ -98,7 +111,7 @@ def register():
     
             db.session.add(newuser)
             db.session.commit()
-            flash(f"Account Succesfully created", "success")
+            flash(f"Account Successfully created", "success")
             return redirect(url_for("login"))
 
         except InvalidRequestError:
@@ -118,7 +131,7 @@ def register():
             flash(f"Error connecting to the database", "danger")
         except BuildError:
             db.session.rollback()
-            flash(f"An error occured !", "danger")
+            flash(f"An error occurred !", "danger")
     return render_template("auth.html",
         form=form,
         text="Create account",
