@@ -1,0 +1,578 @@
+{% extends "base.html" %} {% block content%}
+
+
+<!--Halls Modal-->
+<div class="modal fade" id="exampleModalCenter" data-backdrop="static" tabindex="-1" role="dialog"
+  aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="col-12" style="
+            background: beige;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 25px;
+          ">
+          <div class="col-8" style="text-align: center">
+            <i class="fas fa-solid fa-hotel fa-2x" style="color: #c70707; margin-top: 5px"></i>
+            <div>
+              <h4 style="margin-top: 10px; color: #c70707" class="font-weight-bolder" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                اختر منظم المناسبات
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-flex" style="text-align: center; padding-top: 20px; padding-bottom: 20px">
+          <div class="col-4 font-weight-bolder">Monasba</div>
+          <div class="col-4 font-weight-bolder">Candor</div>
+          <div class="col-4 font-weight-bolder">Planiro</div>
+        </div>
+
+        <div class="col-12 d-flex">
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                باقة 1
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 2000 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org1pack1" type="radio" class="hall_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                2 باقة
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 3000 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org1pack2" type="radio" class="hall_checkbox" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                باقة 1
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 1500 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org2pack1" type="radio" class="hall_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                2 باقة
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 2200 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org2pack2" type="radio" class="hall_checkbox" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                1 باقة
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 1700 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org3pack1" type="radio" class="hall_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                2 باقة
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 2700 جنيه
+              </h6>
+              <input form="mainform" name="event_planner_id" value="org3pack2" type="radio" class="hall_checkbox" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="justify-content: center">
+        <button type="button" class="btn btn-danger font-weight-bold close_modal">
+          حفظ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end halls modal-->
+
+<!--food modal-->
+
+<div class="modal fade" id="foodmodal" data-backdrop="static" tabindex="-1" role="dialog"
+  aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="col-12" style="
+            background: beige;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 25px;
+          ">
+          <div class="col-8" style="text-align: center">
+            <i class="fas fa-solid fa-utensils fa-2x" style="color: #c70707; margin-top: 5px"></i>
+            <div>
+              <h4 style="margin-top: 10px; color: #c70707" class="font-weight-bolder" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                اختر متعهد الطعام
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-flex" style="text-align: center; padding-top: 20px; padding-bottom: 20px">
+          <div class="col-4 font-weight-bolder">
+            <img src="/static/assets/media/new/image1.png" />
+          </div>
+          <div class="col-4 font-weight-bolder">
+            <img src="/static/assets/media/new/image2.png" />
+          </div>
+          <div class="col-4 font-weight-bolder">
+            <img src="/static/assets/media/new/image3.png" />
+          </div>
+        </div>
+        <div class="col-12 d-flex">
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 1</span>
+                <br />
+                <br />
+                <span>200 جاتوه </span>
+                <br />
+                <br />
+                <span>1 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 2000 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f1p1" type="radio" class="food_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 2</span>
+                <br />
+                <br />
+                <span>100 جاتوه </span>
+                <br />
+                <br />
+                <span>1 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 1200 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f1p2" type="radio" class="food_checkbox" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 1</span>
+                <br />
+                <br />
+                <span>3 جاتوه </span>
+                <br />
+                <br />
+                <span>3 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 720 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f2p1" type="radio" class="food_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 1</span>
+                <br />
+                <br />
+                <span>3 جاتوه </span>
+                <br />
+                <br />
+                <span>3 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 720 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f2p2" type="radio" class="food_checkbox" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 1</span>
+                <br />
+                <br />
+                <span>3 جاتوه </span>
+                <br />
+                <br />
+                <span>3 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 720 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f3p1" type="radio" class="food_checkbox" />
+            </div>
+
+            <div class="col-12 mt-8" style="
+                background-color: gainsboro;
+                text-align: center;
+                border-radius: 18px;
+                margin-top: 35;
+                padding: 10px;
+              ">
+              <h6 style="margin-top: 10px; border-radius: 25px; margin-top: 10px" class="name">
+                <span>باقة 1</span>
+                <br />
+                <br />
+                <span>3 جاتوه </span>
+                <br />
+                <br />
+                <span>3 كعك </span>
+              </h6>
+              <h6 style="margin-top: 10px; color: #c70707" class="price">
+                السعر : 720 جنيه
+              </h6>
+              <input form="mainform" name="catering_id" value="f3p2" type="radio" class="food_checkbox" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="justify-content: center">
+        <button type="button" class="btn btn-danger font-weight-bold close_modal">
+          حفظ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end food modal-->
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+  <div class="container py-4 text-center">
+
+
+    <a href="/booked_services/"><h1>مناسباتي المحجوزة </h1></a>
+
+
+</div>
+  <!--begin::Entry-->
+  <div class="d-flex flex-column-fluid">
+    <!--begin::Container-->
+    <div class="container">
+      <!--begin::Card-->
+      <div class="card card-custom gutter-b" style="background-color: white">
+        <div class="p-5">
+          <h4 class="font-weight-bolder">حجز اماكن المناسبات</h4>
+        </div>
+
+        <form id="mainform" method="post">
+          <div class="card-body">
+              <div class="form-group row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="font-weight-bolder" for="formGroupExampleInput">نوع المناسبة</label>
+                    <select name="category" type="text" class="form-control">
+                      {% for event_category in event_categorys %}
+                      <option value="{{event_category}}">
+                        {{event_category}}
+                      </option>
+                      {% endfor%}
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="font-weight-bolder" for="formGroupExampleInput">نوع القاعة
+                    </label>
+                    <select name="indoor" type="text" class="form-control">
+                      {% for value in event_hall_categorys %}
+                      <option value="{{value}}">{{value}}</option>
+                      {% endfor%}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="font-weight-bolder" for="formGroupExampleInput">
+                      وقت البداية</label>
+                    <input name="time" type="datetime-local" class="form-control" />
+                      <br>
+                    <label class="font-weight-bolder" for="formGroupExampleInput">
+                      وقت النهاية</label>
+                    <input  type="datetime-local" class="form-control" />
+                  </div>
+                  
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label class="font-weight-bolder" for="formGroupExampleInput">عدد الحاضرين</label>
+                    <input name="n_of_attendees" type="number" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              {#
+            </form>
+            #}
+
+            <div class="row mt-8" style="background: gainsboro; padding: 60px; border-radius: 25px">
+              <div class="col-4" style="
+                  background: white;
+                  display: flex;
+                  justify-content: center;
+                  padding: 10px;
+                  border-radius: 25px;
+                ">
+                <div class="col-8 halls" style="text-align: center">
+                  <i class="fas fa-solid fa-hotel fa-2x" style="color: #c70707; margin-top: 5px"></i>
+                  <div class="select_hall">
+                    <h4 style="margin-top: 10px; color: #c70707" class="font-weight-bolder" data-toggle="modal"
+                      data-target="#exampleModalCenter">
+                      اختر منظم المناسبات
+                    </h4>
+                  </div>
+                  <div class="hall_selected d-none">
+                    <h3 style="
+                        background-color: gainsboro;
+                        margin-top: 10px;
+                        border-radius: 25px;
+                      " class="name">
+                      1 sdfsdf
+                    </h3>
+
+                    <h3 style="margin-top: 10px; color: #c70707" class="price">
+                      السعر : 88 جنيه
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4"></div>
+
+              <div class="col-4" style="
+                  background: white;
+                  display: flex;
+                  justify-content: center;
+                  padding: 10px;
+                  border-radius: 25px;
+                ">
+                
+                <div class="col-8 foods" style="text-align: center">
+                  <i class="fas fa-solid fa-utensils fa-2x" style="color: #c70707; margin-top: 5px"></i>
+                  <div class="select_food">
+                    <h4 style="margin-top: 10px; color: #c70707" class="font-weight-bolder" data-toggle="modal"
+                      data-target="#foodmodal">
+                      اختر متعهد الطعام
+                    </h4>
+                  </div>
+                   <!--start::to appear-->
+                  <div class="food_selected d-none">
+                    <h3 style="
+                        background-color: gainsboro;
+                        margin-top: 10px;
+                        border-radius: 25px;
+                      " class="name">
+                      1 sdfsdf
+                    </h3>
+
+                    <h3 style="margin-top: 10px; color: #c70707" class="price">
+                      السعر : 88 جنيه
+                    </h3>
+                  </div>
+                   <!--end::to appear-->
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="mt-8">
+                <h3 class="font-weight-bolder">اختر القاعة</h3>
+              </div>
+              <!--start::hall-->
+              
+              
+              <div class="col-12 mt-8">
+                <div class="tab-content">
+                  <div class="tab-pane fade active show" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                      <!--begin::Col ابدا القاعة كاملة من هنا-->
+
+
+                      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <!--begin::Card-->
+                        <div class="card card-custom gutter-b card-stretch">
+                          <!--begin::Body-->
+                          <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex mb-7" style="justify-content: space-between">
+                              <!--begin::Pic-->
+                              <div class="d-flex align-items-center">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                                  <div class="">
+                                    <img src="/static/assets/media/new/H.png" width="200px" alt="image" /> {# hall pic #}
+                                  </div>
+                                  <div class="symbol symbol-lg-75 symbol-circle symbol-primary d-none">
+                                  </div>
+                                </div>
+                                <!--end::Pic-->
+                              </div>
+                              <div></div>
+                              <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7 font-weight-bolder">
+                              <span>قاعة 1</span> {# hall name #}
+                              <input form="mainform" name="venue_id" value="h1" type="radio" class="form-control" />
+                              <br /> {# hall stars #}
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                            </p>
+                            <!--end::Desc-->
+                          </div>
+                          <!--end::Body-->
+                        </div>
+                        <!--end::Card-->
+                      </div>
+
+                      
+                      <!--end::Col-->
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              <!--end::hall-->
+            </div>
+
+
+            
+            <div class="row" style="justify-content: center">
+              <button type="submit" name="acud_id" value="{{current_user.id}}" class="btn btn-danger">حفظ</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--end::Card-->
+    </div>
+    <!--end::Container-->
+  </div>
+  <!--end::Entry-->
+</div>
+<script>
+  $(document).on("change", ".hall_checkbox", function () {
+    var name = $(this).parent().find(".name").text();
+
+    var price = $(this).parent().find(".price").text();
+
+    $(".halls .hall_selected").find(".name").text(name);
+
+    $(".halls .hall_selected").find(".price").text(price);
+    $(".halls .hall_selected").removeClass("d-none");
+  });
+
+  $(document).on("change", ".food_checkbox", function () {
+    var name = $(this).parent().find(".name").html();
+
+    var price = $(this).parent().find(".price").text();
+
+    $(".foods .food_selected").find(".name").html(name);
+
+    $(".foods .food_selected").find(".price").text(price);
+    $(".foods .food_selected").removeClass("d-none");
+  });
+
+  $(document).on("click", ".close_modal", function () {
+    $(".modal").modal("hide");
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block title%} {{ title }} {% endblock %} 
+{% block content%} 
+<form action="{{ request.path }}" method="POST" class="card-body">
+    {{ form.csrf_token }}
+{% for field in form %} 
+{{ field.label() }} 
+{{ field() }} 
+<br>
+{% endfor%} 
+<button type="submit" class="btn btn-block btn-primary mb-3"> {{ btn_action }} </button>
+</form>
+{% endblock%}
+
+

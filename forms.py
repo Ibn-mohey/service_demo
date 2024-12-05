@@ -5,6 +5,7 @@ from wtforms import (
     IntegerField,
     DateField,
     TextAreaField,
+    
 )
 
 from flask_wtf import FlaskForm
@@ -55,3 +56,10 @@ class register_form(FlaskForm):
     def validate_uname(self, uname):
         if User.query.filter_by(username=username.data).first():
             raise ValidationError("Username already taken!")
+        
+from wtforms_alchemy import ModelForm
+
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        # exclude = ['_pw_hash']

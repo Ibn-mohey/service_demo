@@ -1,0 +1,169 @@
+
+
+{% extends "base.html" %}
+
+{% block content%}
+
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+
+
+
+ 
+
+
+
+
+    
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Card-->
+            <div class="card card-custom gutter-b" style="background-color: #f3f1f1;">
+
+                <div class="p-5">
+                    <h4 class="font-weight-bolder">طلباتي</h4>
+                </div>
+
+                <form>
+                    <div class="card-body">
+
+                        
+                        <div class="flex-column offcanvas-mobile w-650px" id="kt_profile_aside">
+                            <!--begin::List Widget 17-->
+                            {% for event in events %} 
+
+                    <div class="card card-custom gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label font-weight-bolder text-dark">    {{event.category}}  </span>
+                            </h3>
+                            
+                        </div>
+                        <!--end::Header-->
+                    
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::Container-->
+                            <div>
+                                <!--begin::Item-->
+
+                                <div class="d-flex align-items-center mb-8">
+                                    <!--begin::Symbol-->
+                                    
+                                    <div class="symbol mr-2 pt-1">
+                                        <div class="symbol-label min-w-65px min-h-100px" style="background-image: url('{{event.hall_name().0}}"></div> {# hall pic #}
+                                    </div>
+                                    <!--end::Symbol-->
+                                    <!--begin::Info-->
+                                    <div class="d-flex flex-column mr-2 pt-1">
+                                        <!--begin::Title-->
+                                        <a class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">  {{event.hall_name().1}}    </a>  {# hall name #}
+                                        <!--end::Title-->
+                    
+                                        <!--begin::Text-->
+                                        <span class="text-muted font-weight-bold font-size-sm pb-4">
+                                            الوقت : {{event.time}} <br>  {# hall number #}
+                                            عدد الافراد : {{event.n_of_attendees}}                                             <br>
+                                          نظام القاعة {{event.indoor}}    <br>
+
+                                            
+
+                                        </span>
+                                    
+                                        <!--end::Text-->
+                    
+                                    </div>
+                                    
+                                    <div class="symbol mr-2 pt-2">
+                                        {#<a class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg"> منظم القاعة : {{event.planner_data().0}}      </a> #} {# hall name #}
+                                        <div class="symbol-label min-w-100px min-h-300px" style="background-image: url('/static/assets/media/new/{{event.planner_data().3}} ')"></div>
+                                    </div>
+                                    <div class="d-flex flex-column mr-2 pt-1">
+                                        <!--begin::Title-->
+                                        <a class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg"> منظم القاعة : {{event.planner_data().0}}      </a>  {# hall name #}
+                                        <!--end::Title-->
+                    
+                                        <!--begin::Text-->
+                                        <span class="text-muted font-weight-bold font-size-sm pb-4">
+                                            package : {{event.planner_data().1}}      <br>
+                                            price : {{event.planner_data().2}}      <br>
+
+                                        </span>
+                                    
+                                        <!--end::Text-->
+                    
+                                    </div>
+                                    <!--end::Info-->
+
+<!--begin::Symbol-->
+                                    <div class="symbol mr-2 pt-1">
+                                        <div class="symbol-label min-w-100px min-h-200px" style="background-image: url('/static/assets/media/new/{{event.catering_data().2}} ')"></div>
+
+                                    </div>
+        <!--end::Symbol-->           
+                         <!--begin::Info-->
+                                    <div class="d-flex flex-column mr-2 pt-1">
+                                        <!--begin::Title-->
+                                        <a class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg"> مقدم الطعام: {{event.catering_data().3}} </a>  {# hall name #}
+                                        <!--end::Title-->
+                    
+                                        <!--begin::Text-->
+                                        <span class="text-muted font-weight-bold font-size-sm pb-4">
+                                            package : {{event.catering_data().0}}      <br>
+                                            price : {{event.catering_data().1}}      <br>
+
+                                            
+
+                                        </span>
+                                    
+                                        <!--end::Text-->
+                    
+                                    </div>
+
+                                    
+                                    <!--end::Info-->
+                                    <div style="margin-right: auto;"> 	
+                                        <span class="text-muted font-weight-bold" style="font-size: 20px;">
+                                        السعر: <span class="text-dark-75 font-weight-bolder">{{event.planner_data().2+event.catering_data().1+ 2000}}  </span>
+                                    </span>
+                                </div>
+                            
+
+
+                                </div>
+                                
+                                         
+                                        <!--begin::Action-->
+                                      
+                                        <!--end::Action-->
+                                <!--end::Item-->
+                    
+                            </div>
+                            <!--end::Container-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+
+
+                    {% endfor%} 
+                    
+                    <!--end::List Widget 17-->
+
+                   </div>
+
+                    </div>
+                </form>
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+
+
+
+{% endblock %}
